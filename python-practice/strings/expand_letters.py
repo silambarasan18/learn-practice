@@ -41,3 +41,11 @@ print(c)
 c = expand_string_regex(a)
 print(c)  # Output: abbb
 
+print(expand_string("a12b3"))    # Output: aaaaaaaaaaaabbb
+print(expand_string("x4y21z5"))  # Output: xxxxyyyyyyyyyyyyyyyyyyyzzzzz
+print(expand_string("m0n10"))    # Output: nnnnnnnnnn (m is skipped as 0 means no repeats)
+print(expand_string(""))         # Output: (empty string)
+print(expand_string("p5"))       # Output: ppppp
+print(expand_string("q1r"))      # Output: q (invalid format for 'r' is ignored)
+print(expand_string("a123"))     # Output: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
